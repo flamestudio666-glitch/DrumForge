@@ -21,10 +21,10 @@ juce_add_plugin(DrumForge
   VST3_CATEGORIES Instrument Drum
   COPY_PLUGIN_AFTER_BUILD FALSE)
 
-target_sources(DrumForge PRIVATE
-  Source/PluginProcessor.cpp
-  Source/PluginEditor.cpp)
-
+  target_sources(DrumForge PRIVATE
+     PluginProcessor.cpp
+     PluginEditor.cpp)
+     
 target_compile_definitions(DrumForge PUBLIC
   JUCE_WEB_BROWSER=0 JUCE_USE_CURL=0 JUCE_VST3_CAN_REPLACE_VST2=0)
 
